@@ -18,7 +18,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\..\..\..\..\Program Files %28x86%29\Steam\steamapps\common\BloonsTD6\Mods\</OutputPath>
+    <OutputPath>.\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -37,7 +37,7 @@
       <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="BloonsTD6 Mod Helper">
-      <HintPath>..\..\..\..\..\Steam\steamapps\common\BloonsTD6\Mods\BloonsTD6 Mod Helper.dll</HintPath>
+      <HintPath>..\..\ModHelper\BloonsTD6 Mod Helper.dll</HintPath>
     </Reference>
     <Reference Include="ExCSS.Unity">
       <HintPath>..\..\..\..\..\Program Files\Unity\Hub\Editor\2020.3.13f1\Editor\Data\Managed\ExCSS.Unity.dll</HintPath>
@@ -698,7 +698,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy /Y "$(TargetDir)$(ProjectName).dll" "D:\Steam\steamapps\common\BloonsTD6\Mods"
-copy /Y "$(TargetDir)$(ProjectName).dll" "D:\Windows Stuff\Documents\GitHub\BTD6Mods\MiniCustomTowersV2"</PostBuildEvent>
+    <PostBuildEvent>copy /Y $(TargetDir)\obj\$(ConfigurationName)\$(TargetFileName) "C:\Program Files (x86)\Steam\steamapps\common\BloonsTD6\Mods\"</PostBuildEvent>
   </PropertyGroup>
 </Project>
