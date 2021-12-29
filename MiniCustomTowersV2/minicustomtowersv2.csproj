@@ -18,7 +18,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>.\</OutputPath>
+    <OutputPath>obj\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -698,6 +698,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy /Y $(TargetDir)\obj\$(ConfigurationName)\$(TargetFileName) "C:\Program Files (x86)\Steam\steamapps\common\BloonsTD6\Mods\"</PostBuildEvent>
+    <PostBuildEvent>copy /Y $(TargetDir)\$(TargetFileName) "C:\Program Files (x86)\Steam\steamapps\common\BloonsTD6\Mods\"</PostBuildEvent>
   </PropertyGroup>
 </Project>
